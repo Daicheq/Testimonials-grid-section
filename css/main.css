@@ -6,8 +6,9 @@
 }
 
 body {
-  font-family: "Barlow Semi Condensed", sans-serif;
   background-color: hsl(0deg, 0%, 81%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
   font-size: 13px;
 }
 
@@ -30,34 +31,45 @@ body {
 }
 
 .card {
-  width: 100%;
+  height: inherit;
+  width: inherit;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.322);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.322);
   color: hsl(210deg, 46%, 95%);
 }
 .card__person {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 15px;
   margin-bottom: 30px;
 }
 .card__person-name {
+  margin-left: 1.5rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 .card__person-verified {
   position: absolute;
-  top: 20px;
-  left: 50px;
+  top: 1.1rem;
+  left: 4rem;
   opacity: 0.5;
+}
+.card__title {
+  margin-bottom: 2rem;
+  line-height: 1.4;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.card__opinion {
+  line-height: 1.4;
+  opacity: 0.7;
 }
 
 .card-one {
@@ -84,7 +96,53 @@ body {
 
 img {
   display: block;
-  width: 35px;
+  width: 2.5rem;
   border: 2px solid hsla(210deg, 46%, 95%, 0.5);
   border-radius: 50%;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    width: 100%;
+    margin: 0;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    width: 80vw;
+    height: 100%;
+    margin-top: 3.2rem;
+  }
+  .card-one {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .card-two {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .card-three {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .card-four {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .card-five {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
 }/*# sourceMappingURL=main.css.map */
