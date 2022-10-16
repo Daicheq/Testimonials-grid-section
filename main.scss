@@ -41,7 +41,7 @@ body {
 		display: flex;
 		position: relative;
 		align-items: center;
-		margin-bottom: 30px;
+		margin-bottom: 1.2rem;
 		&-name {
 			margin-left: 1.5rem;
 			align-self: flex-start;
@@ -55,7 +55,8 @@ body {
 	}
 
 	&__title {
-		margin-bottom: 2rem;
+		position: relative;
+		margin-bottom: 1rem;
 		line-height: 1.4;
 		font-weight: 600;
 		font-size: 1.2rem;
@@ -68,6 +69,7 @@ body {
 }
 
 .card-one {
+	position: relative;
 	background-color: $moderate-violet;
 }
 .card-two {
@@ -88,56 +90,57 @@ body {
 	color: $very-dark-blackish-blue;
 }
 
-img {
+.person-img {
 	display: block;
 	width: 2.5rem;
 	border: 2px solid $grayish-blue-opacity;
 	border-radius: 50%;
+}
+.quota-img {
+	position: absolute;
+	right: 1rem;
+	top: 0.5rem;
+	opacity: 0.6;
 }
 
 @media (min-width: 1440px) {
 	.card {
 		width: 100%;
 		margin: 0;
+
+		&__opinion {
+			line-height: 1.4rem;
+		}
 	}
 	.wrapper {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		gap: 1rem;
-		width: 80vw;
+		width: 80%;
 		height: 100%;
 		margin-top: 3.2rem;
+		margin-bottom: 3.2rem;
 	}
 	.card-one {
-		grid-column-start: 1;
-		grid-column-end: 3;
-		grid-row-start: 1;
-		grid-row-end: 2;
+		grid-area: 1/1/2/3;
 	}
 	.card-two {
-		grid-column-start: 3;
-		grid-column-end: 4;
-		grid-row-start: 1;
-		grid-row-end: 2;
+		grid-area: 1/3/2/4;
 	}
 
 	.card-three {
-		grid-column-start: 1;
-		grid-column-end: 2;
-		grid-row-start: 2;
-		grid-row-end: 3;
+		grid-area: 2/1/3/2;
 	}
 	.card-four {
-		grid-column-start: 2;
-		grid-column-end: 4;
-		grid-row-start: 2;
-		grid-row-end: 3;
+		grid-area: 2/2/3/4;
 	}
 	.card-five {
-		grid-column-start: 4;
-		grid-column-end: 5;
-		grid-row-start: 1;
-		grid-row-end: 3;
+		grid-area: 1/4/3/5;
+	}
+
+	.quota-img {
+		right: 6rem;
+		top: 0.5rem;
 	}
 }
